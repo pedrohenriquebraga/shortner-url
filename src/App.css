@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  background-color: #efefef;
 }
 
-.App-link {
-  color: #61dafb;
+#shortner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #8f94fb, #4e54c8);
+  padding: 30px;
+  min-height: 200px;
+  border-radius: 20px;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  width: 100%;
+  margin-top: 25px;
+}
+
+#url-input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  margin-top: 15px;
+}
+
+#shortner-button {
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 15px;
+  color: #fff;
+  font-size: 18px;
+  transition: background 300ms;
+  background-color: #555;
+}
+
+#shortner-button:not(:disabled) {
+  cursor: pointer;
+  background-color: #216eb6;
+}
+
+#shortner-button:hover:not(:disabled) {
+  background-color: #1e61a0;
 }

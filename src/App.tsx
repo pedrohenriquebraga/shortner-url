@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FormEvent, useState } from "react";
+import "./App.css";
 
 function App() {
+  const [url, setUrl] = useState("");
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    alert(`The url you entered was: ${url}`);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <main id="shortner-container">
+        <h1>Encurte seus links!</h1>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Transforme links grandes e suspeitos em links mais amigáveis e de
+          fácil leitura.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <form onSubmit={handleSubmit}>
+          <input
+            placeholder="Cole o link aqui..."
+            id="url-input"
+            type="url"
+            name="url"
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+          />
+          <button
+            type="submit"
+            id="shortner-button"
+            disabled={!url}
+          >
+            Encurtar agora!
+          </button>
+        </form>
+      </main>
     </div>
   );
 }
