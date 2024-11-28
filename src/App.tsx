@@ -34,6 +34,10 @@ function App() {
             Encurtar agora!
           </button>
         </form>
+        <div id="new-url-container">
+          <p>Link encurtado com sucesso!</p>
+          <p id="url">https://encurtar.ly/iqhe13</p>
+        </div>
       </main>
     </div>
   );

@@ -38,7 +38,7 @@ form {
   color: #fff;
   font-size: 18px;
   transition: background 300ms;
-  background-color: #555;
+  background-color: #aaa;
 }
 
 #shortner-button:not(:disabled) {
@@ -48,4 +48,19 @@ form {
 
 #shortner-button:hover:not(:disabled) {
   background-color: #1e61a0;
+}
+
+#new-url-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+#new-url-container p {
+  font-size: 14px;
+}
+
+#new-url-container #url {
+  font-size: 22px;
+  font-weight: 600;
+  user-select: all;
 }
